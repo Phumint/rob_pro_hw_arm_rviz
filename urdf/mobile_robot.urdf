@@ -8,7 +8,7 @@
             <box size="0.35 0.25 0.05"/>
         </geometry>
         <origin rpy="0 0 0" xyz="0 0 0"/>
-        <material>
+        <material name="blue">
             <color rgba = "0 0 1 1"/>
         </material>
     </visual>
@@ -64,10 +64,27 @@
     <joint name="base_to_wheel_3" type="continuous">
         <parent link="base_link"/>
         <child link="wheel_3_link"/>
-        <origin rpy = "1.57 0 0" xyz = "0 0 0.0"/>
+        <origin rpy = "1.57 0 0" xyz = "-0.125 0.15 0"/>
         <axis xyz = "0 0 1"/>
     </joint>
 
+    <!--rear left wheel-->
+
+    <link name="wheel_4_link">
+    <visual>
+        <geometry>
+            <cylinder length="0.05" radius="0.05"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="0 0 0"/>
+    </visual>
+    </link>
+
+    <joint name="base_to_wheel_4" type="continuous">
+        <parent link="base_link"/>
+        <child link="wheel_4_link"/>
+        <origin rpy = "1.57 0 0" xyz = "0.125 -0.150 0.0"/>
+        <axis xyz = "0 0 1"/>
+    </joint>
 
     <!--base to world-->
 
